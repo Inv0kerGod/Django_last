@@ -6,24 +6,48 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('base', '0005_news'),
+        ("base", "0005_news"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Our_advantages',
+            name="Our_advantages",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('title', models.CharField(max_length=255, verbose_name='Заголовок')),
-                ('title_ky', models.CharField(max_length=255, null=True, verbose_name='Заголовок')),
-                ('title_ru', models.CharField(max_length=255, null=True, verbose_name='Заголовок')),
-                ('description', models.TextField(verbose_name='Описание')),
-                ('description_ky', models.TextField(null=True, verbose_name='Описание')),
-                ('description_ru', models.TextField(null=True, verbose_name='Описание')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("title", models.CharField(max_length=255, verbose_name="Заголовок")),
+                (
+                    "title_ky",
+                    models.CharField(
+                        max_length=255, null=True, verbose_name="Заголовок"
+                    ),
+                ),
+                (
+                    "title_ru",
+                    models.CharField(
+                        max_length=255, null=True, verbose_name="Заголовок"
+                    ),
+                ),
+                ("description", models.TextField(verbose_name="Описание")),
+                (
+                    "description_ky",
+                    models.TextField(null=True, verbose_name="Описание"),
+                ),
+                (
+                    "description_ru",
+                    models.TextField(null=True, verbose_name="Описание"),
+                ),
             ],
             options={
-                'verbose_name': '',
-                'verbose_name_plural': 'Наши преимущества',
+                "verbose_name": "",
+                "verbose_name_plural": "Наши преимущества",
             },
         ),
     ]

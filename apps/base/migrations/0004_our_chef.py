@@ -6,23 +6,49 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('base', '0003_popular_category'),
+        ("base", "0003_popular_category"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Our_chef',
+            name="Our_chef",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=255, verbose_name='Имя Шеф-повара')),
-                ('type', models.CharField(max_length=255, verbose_name='Тип повара')),
-                ('photo', models.ImageField(upload_to='photo_chef/', verbose_name='фото повара')),
-                ('facebook', models.URLField(blank=True, null=True, verbose_name='Facebook - повара')),
-                ('youtube', models.URLField(blank=True, null=True, verbose_name='youtube - повара')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "name",
+                    models.CharField(max_length=255, verbose_name="Имя Шеф-повара"),
+                ),
+                ("type", models.CharField(max_length=255, verbose_name="Тип повара")),
+                (
+                    "photo",
+                    models.ImageField(
+                        upload_to="photo_chef/", verbose_name="фото повара"
+                    ),
+                ),
+                (
+                    "facebook",
+                    models.URLField(
+                        blank=True, null=True, verbose_name="Facebook - повара"
+                    ),
+                ),
+                (
+                    "youtube",
+                    models.URLField(
+                        blank=True, null=True, verbose_name="youtube - повара"
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'Повар',
-                'verbose_name_plural': 'Повара',
+                "verbose_name": "Повар",
+                "verbose_name_plural": "Повара",
             },
         ),
     ]

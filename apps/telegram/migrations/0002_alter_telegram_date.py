@@ -6,13 +6,13 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('telegram', '0001_initial'),
+        ("telegram", "0001_initial"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='telegram',
-            name='date',
-            field=models.DateField(verbose_name='Дата'),
+            model_name="telegram",
+            name="date",
+            field=models.DateField(verbose_name="Дата"),
         ),
     ]

@@ -6,13 +6,23 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('telegram', '0003_telegramuser'),
+        ("telegram", "0003_telegramuser"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='telegram',
-            name='persone',
-            field=models.CharField(choices=[('1 ', '1 - Persone'), ('2 ', '2 - Persone'), ('3 ', '3 - Persone'), ('4 ', '4 - Persone'), ('5 ', '5 - Persone')], max_length=20, verbose_name='Количество людей'),
+            model_name="telegram",
+            name="persone",
+            field=models.CharField(
+                choices=[
+                    ("1 ", "1 - Persone"),
+                    ("2 ", "2 - Persone"),
+                    ("3 ", "3 - Persone"),
+                    ("4 ", "4 - Persone"),
+                    ("5 ", "5 - Persone"),
+                ],
+                max_length=20,
+                verbose_name="Количество людей",
+            ),
         ),
     ]

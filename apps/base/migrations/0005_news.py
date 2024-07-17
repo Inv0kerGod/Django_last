@@ -6,23 +6,50 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('base', '0004_our_chef'),
+        ("base", "0004_our_chef"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='News',
+            name="News",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('title', models.CharField(max_length=255, verbose_name='Заголовок новости')),
-                ('image', models.ImageField(upload_to='news_image/', verbose_name='фото новости')),
-                ('author', models.CharField(max_length=255, verbose_name='Автор новости')),
-                ('about', models.CharField(max_length=255, verbose_name='Краткое описание новости')),
-                ('created', models.DateField(auto_now_add=True, verbose_name='Дата публикации')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "title",
+                    models.CharField(max_length=255, verbose_name="Заголовок новости"),
+                ),
+                (
+                    "image",
+                    models.ImageField(
+                        upload_to="news_image/", verbose_name="фото новости"
+                    ),
+                ),
+                (
+                    "author",
+                    models.CharField(max_length=255, verbose_name="Автор новости"),
+                ),
+                (
+                    "about",
+                    models.CharField(
+                        max_length=255, verbose_name="Краткое описание новости"
+                    ),
+                ),
+                (
+                    "created",
+                    models.DateField(auto_now_add=True, verbose_name="Дата публикации"),
+                ),
             ],
             options={
-                'verbose_name': 'Новость',
-                'verbose_name_plural': 'Новости',
+                "verbose_name": "Новость",
+                "verbose_name_plural": "Новости",
             },
         ),
     ]
