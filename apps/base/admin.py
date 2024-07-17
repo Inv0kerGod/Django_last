@@ -1,5 +1,5 @@
 from django.contrib import admin
-from apps.base.models import Base, Our_advantages, Popular_category, Our_chef, News
+from apps.base.models import Base, Our_advantages, Popular_category, Our_chef, News, MenuItem
 from modeltranslation.admin import TranslationAdmin
 from typing import Any
 from django.http import HttpRequest
@@ -10,6 +10,7 @@ admin.site.register(Base)
 admin.site.register(Popular_category)
 admin.site.register(Our_chef)
 admin.site.register(News)
+admin.site.register(MenuItem)
 
 class Our_advantagesTranslationAdmin(TranslationAdmin):
     model = Our_advantages

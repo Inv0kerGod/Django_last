@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect,get_object_or_404
-from apps.base.models import Base, Popular_category,Our_chef,News, Our_advantages
+from apps.base.models import Base, Popular_category,Our_chef,News, Our_advantages,MenuItem
 from apps.telegram.models import Telegram
 from apps.telegram.views import get_text
 from apps.telegram.forms import PERSONE_CHOISE, TIME_CHOISE
@@ -47,3 +47,11 @@ def chef_detail(request, id):
     base = Base.objects.latest('id')
     chef = Our_chef.objects.get(id=id)
     return render(request, 'base/chef-details-dark.html', locals())
+
+def menu_list(request):
+    items = MenuItem.objects.all()
+    return render(request, 'food-menu-2-dark.html', {'items': items})
+
+def menu_item_detail(request, item_id):
+    item = get_object_or_404(MenuItem, id=item_id)
+    return render(request, 'menu_item_detail.html', {'item': item})

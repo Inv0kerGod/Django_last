@@ -138,3 +138,31 @@ class Our_advantages(models.Model):
     class Meta:
         verbose_name = ""
         verbose_name_plural = "Наши преимущества"
+        
+        
+class MenuItem(models.Model):
+    name = models.CharField(
+        max_length=200,
+        verbose_name="Название"
+    )
+    description = models.TextField(
+        max_length=255,
+        verbose_name="описание"
+        
+    )
+    price = models.CharField(
+        max_length=200,
+        verbose_name="Цена"
+    )
+    image = models.ImageField(
+        upload_to='menu_images/',
+        verbose_name="Фото Меню"
+
+    )
+
+    def __str__(self):
+        return self.name
+    
+    class Meta:
+        verbose_name = ""
+        verbose_name_plural = "Наши Меню"
